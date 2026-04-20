@@ -1314,6 +1314,7 @@ public class SvekEdge extends XAbstractEdge implements XEdge, UDrawable {
 	public XPoint2D getStartContactPoint() {
 		if (dotPath == null)
 			return null;
+		
 		final XPoint2D start = dotPath.getStartPoint();
 		if (start == null)
 			return null;
@@ -1323,6 +1324,9 @@ public class SvekEdge extends XAbstractEdge implements XEdge, UDrawable {
 	}
 
 	public XPoint2D getEndContactPoint() {
+		if (dotPath == null)
+			return null;
+
 		final XPoint2D end = dotPath.getEndPoint();
 		if (end == null)
 			return null;
